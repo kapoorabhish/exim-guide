@@ -1,4 +1,3 @@
-<! siteground.com/tutorials/php-mysql/execute_server_commands.htm>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -58,11 +57,11 @@
           <div class="span12">
         <div class="navbar navbar_">
               <div class="container">
-            <h1 class="brand brand_"><a href="navik.html"><img alt="" src="imgs/logo.gif"> </a></h1>
+            <h1 class="brand brand_"><a href="index.html"><img alt="" src="imgs/logo.gif"> </a></h1>
             <a class="btn btn-navbar btn-navbar_" data-toggle="collapse" data-target=".nav-collapse_">Menu <span class="icon-bar"></span> </a>
             <div class="nav-collapse nav-collapse_  collapse">
                   <ul class="nav sf-menu">
-                <li><a href="navik.html">Home</a></li>
+                <li><a href="index.html">Home</a></li>
 		<li><a href="about.html">About</a></li>
 		
                 <li class="sub-menu, active"><a href="service.html">Services</a>
@@ -88,6 +87,8 @@
     <div class="row">
           <div class="span12"> 
 
+<body >
+
 
 <body bgcolor="white" text="black">
 <?php
@@ -97,11 +98,24 @@ mysql_connect("phpmyadmin","root","12345");
 @mysql_select_db("test") or die("unable to select database");
 if(($count==2&&$itc<=98)||($count==1&&$itc<=98))
 {
-	
-		$chap=mysql_fetch_array(mysql_query("select chapter_name from chapter where chapter_no=$itc "));
+		
+		$chap=mysql_fetch_array(mysql_query("select chapter_name,chapter_no from chapter where chapter_no=$itc "));
 		echo "<b>Chapter-".$itc."--------"."<i>".$chap['chapter_name']."</i>"."</b>";
 		echo "<br>";
-		echo "<br>";
+		if($itc<10)
+		{
+			echo"<a  href=http://dgftcom.nic.in/licasp/itchs2012/"."0".$chap['chapter_no']."head.pdf>Chapter Notes</a>";
+			echo"<br>";
+			echo"<a  href=http://dgftcom.nic.in/licasp/itchs2012/"."0".$chap['chapter_no']."foot.pdf>Policy Notes</a>";
+			
+		}
+		else
+		{
+			echo"<a  href=http://dgftcom.nic.in/licasp/itchs2012/".$chap['chapter_no']."head.pdf>Chapter Notes</a>";
+			echo "<br>";
+			echo"<a href=http://dgftcom.nic.in/licasp/itchs2012/".$chap['chapter_no']."foot.pdf>Policy Notes</a>";
+			echo "<br>";
+		}
 		$query1=mysql_query("select hs4_no,hs4_des from master where itc like '$itc%' ");
 		while($row1=mysql_fetch_array($query1))
 		{
@@ -122,6 +136,7 @@ if(($count==2&&$itc<=98)||($count==1&&$itc<=98))
 						echo"<th width=800>Item Description</th>";
 						echo"<th width=200>Policy</th>";
 						echo"<th width=200>Condition</th>";
+						
 						
 				while($row3=mysql_fetch_array($query3))
 				{
@@ -144,10 +159,28 @@ if(($count==2&&$itc<=98)||($count==1&&$itc<=98))
 else if(($count==3&&$itc<=910)||($count==4&&$itc<=9805))
 {
 	$chap=(int)($itc/100);
+	$chapter_note=(string)($chap);
+	if($chap<10)
+		{
+			echo"<a  href=http://dgftcom.nic.in/licasp/itchs2012/"."0".$chapter_note."head.pdf>Chapter Notes</a>";
+			echo"<br>";
+			echo"<a  href=http://dgftcom.nic.in/licasp/itchs2012/"."0".$chapter_note."f oot.pdf>Policy Notes</a>";
+			echo "<br>";
+			
+		}
+		else
+		{
+			echo"<a  href=http://dgftcom.nic.in/licasp/itchs2012/".$chapter_note."head.pdf>Chapter Notes</a>";
+			echo "<br>";
+			echo"<a  href=http://dgftcom.nic.in/licasp/itchs2012/".$chapter_note."foot.pdf>Policy Notes</a>";
+			echo "<br>";
+		}
 	$row=mysql_fetch_array(mysql_query("select chapter_name from chapter where chapter_no=$chap "));
 	echo "<b>Chapter-".$chap."--------"."<i>".$row['chapter_name']."</i>"."</b>";
 	echo "<br>";
+	
 	echo "<br>";
+	
 	$query1=mysql_query("select hs4_no,hs4_des from master where hs4_no=$itc");
 	while($row1=mysql_fetch_array($query1))
 		{
@@ -189,9 +222,25 @@ else if(($count==3&&$itc<=910)||($count==4&&$itc<=9805))
 else if(($count==5&&$itc<=91099)||($count==6&&$itc<=980590))
 {
 	$chap=(int)($itc/10000);
+	$chapter_note=(string)($chap);
 	$row=mysql_fetch_array(mysql_query("select chapter_name from chapter where chapter_no=$chap"));
 	echo "<b>Chapter-".$chap."--------"."<i>".$row['chapter_name']."</i>"."</b>";
 	echo "<br>";
+	if($chap<10)
+		{
+			echo"<a  href=http://dgftcom.nic.in/licasp/itchs2012/"."0".$chapter_note."head.pdf>Chapter Notes</a>";
+			echo"<br>";
+			echo"<a  href=http://dgftcom.nic.in/licasp/itchs2012/"."0".$chapter_note."f oot.pdf>Policy Notes</a>";
+			echo "<br>";
+			
+		}
+		else
+		{
+			echo"<a  href=http://dgftcom.nic.in/licasp/itchs2012/".$chapter_note."head.pdf>Chapter Notes</a>";
+			echo "<br>";
+			echo"<a  href=http://dgftcom.nic.in/licasp/itchs2012/".$chapter_note."foot.pdf>Policy Notes</a>";
+			echo "<br>";
+		}
 	echo "<br>";
 	$sub=(int)($itc/100);
 	$query1=mysql_query("select hs4_no,hs4_des from master where hs4_no=$sub");
@@ -229,9 +278,24 @@ else if(($count==5&&$itc<=91099)||($count==6&&$itc<=980590))
 else if(($count==7&&$itc<=9109990)||($count==8&&$itc<=98059000))
 {
 	$chap=(int)($itc/1000000);
+	$chapter_note=(string)($chap);
 	$row=mysql_fetch_array(mysql_query("select chapter_name from chapter where chapter_no=$chap"));
 	echo "<b>Chapter-".$chap."--------"."<i>".$row['chapter_name']."</i>"."</b>";
 	echo "<br>";
+	if($chap<10)
+		{
+			echo"<a  href=http://dgftcom.nic.in/licasp/itchs2012/"."0".$chapter_note."head.pdf>Chapter Notes</a>";
+			echo"<br>";
+			echo"<a  href=http://dgftcom.nic.in/licasp/itchs2012/"."0".$chapter_note."f oot.pdf>Policy Notes</a>";
+			echo "<br>";
+		}
+		else
+		{
+			echo"<a  href=http://dgftcom.nic.in/licasp/itchs2012/".$chapter_note."head.pdf>Chapter Notes</a>";
+			echo "<br>";
+			echo"<a  href=http://dgftcom.nic.in/licasp/itchs2012/".$chapter_note."foot.pdf>Policy Notes</a>";
+			echo "<br>";
+		}
 	echo "<br>";
 	$sub=(int)($itc/10000);
 	$query1=mysql_query("select hs4_no,hs4_des from master where hs4_no=$sub");
