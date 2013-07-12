@@ -164,7 +164,7 @@ else if(($count==3&&$itc<=910)||($count==4&&$itc<=9805))
 		{
 			echo"<a  href=http://dgftcom.nic.in/licasp/itchs2012/"."0".$chapter_note."head.pdf>Chapter Notes</a>";
 			echo"<br>";
-			echo"<a  href=http://dgftcom.nic.in/licasp/itchs2012/"."0".$chapter_note."f oot.pdf>Policy Notes</a>";
+			echo"<a  href=http://dgftcom.nic.in/licasp/itchs2012/"."0".$chapter_note."foot.pdf>Policy Notes</a>";
 			echo "<br>";
 			
 		}
