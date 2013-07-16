@@ -1,6 +1,6 @@
 <html>
 <body bgcolor=cyan>
-<form action="query6.php" method="post">
+<form action="query5.php" method="post">
 ITCHS: <input type="number" name ="code">
 
 <input type="submit" value="Submit">

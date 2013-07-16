@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-	<title>Navik-About Us</title>
+	<title>Navik-Import</title>
 	<meta charset="utf-8">
 	<link rel="icon" href="imgs/slogo.ico" type="image/x-icon">
 	<link rel="shortcut icon" href="imgs/slogo.ico" type="image/x-icon" />
@@ -57,14 +57,14 @@
           <div class="span12">
         <div class="navbar navbar_">
               <div class="container">
-            <h1 class="brand brand_"><a href="navik.html"><img alt="" src="imgs/logo.gif"> </a></h1>
+            <h1 class="brand brand_"><a href="index.html"><img alt="" src="imgs/logo.gif"> </a></h1>
             <a class="btn btn-navbar btn-navbar_" data-toggle="collapse" data-target=".nav-collapse_">Menu <span class="icon-bar"></span> </a>
             <div class="nav-collapse nav-collapse_  collapse">
                   <ul class="nav sf-menu">
-                <li ><a href="navik.html">Home</a></li>
-		<li class="active"><a href="about.html">About</a></li>
+                <li><a href="index.html">Home</a></li>
+		<li><a href="about.html">About</a></li>
 		
-                <li class="sub-menu"><a href="service.html">Services</a>
+                <li class="sub-menu, active"><a href="service.html">Services</a>
                       <ul>
                     <li><a href="import.html">Import</a></li>
                     <li><a href="export.html">Export</a></li>
@@ -87,6 +87,8 @@
     <div class="row">
           <div class="span12"> 
 
+ <!--============================== content =================================-->
+ 
 <! siteground.com/tutorials/php-mysql/execute_server_commands.htm>
 <body>
 <?php
@@ -96,47 +98,92 @@ $search_term_esc = AddSlashes($item);
 
 mysql_connect("phpmyadmin","root","12345");
 @mysql_select_db("test") or die("unable to select database");
-$sql = "SELECT * FROM final2 WHERE Description LIKE '%$search_term_esc%'";
-$result=mysql_query($sql);
-$num=mysql_numrows($result);
-$i=0;
-echo "<table border='3' bgcolor='yellow'>";
-echo"<th>ITC(HS)</th>";
-echo"<th>Item Description</th>";
-echo"<th>hs(4)</th>";
-echo"<th>hs(5)</th>";
-echo"<th>hs(6)</th>";
-echo"<th>hs(8)</th>";
-echo"<th>Policy</th>";
-echo"<th>Condition</th>";
-while ($i<$num) {
-$field1=mysql_result($result,$i,"itc");
-$field2=mysql_result($result,$i,"description");
-$field3=mysql_result($result,$i,"hs4");
-$field4=mysql_result($result,$i,"hs5");
-$field5=mysql_result($result,$i,"hs6");
-$field6=mysql_result($result,$i,"hs8");
-$field7=mysql_result($result,$i,"policy");
-$field8=mysql_result($result,$i,"conditions");
-echo "<tr>";
-echo "<td>".$field1."</td>";
-echo "<td>".$field2."</td>";
-echo "<td>".$field3."</td>";
-echo "<td>".$field4."</td>";
-echo "<td>".$field5."</td>";
-echo "<td>".$field6."</td>";
-echo "<td>".$field7."</td>";
-echo "<td>".$field8."</td>";
-echo "</tr>";
+$query1=mysql_query("SELECT * FROM master WHERE desription LIKE '%$search_term_esc%'or hs4_des LIKE '%$search_term_esc%' or hs5_des LIKE '%$search_term_esc%' or hs6_des LIKE '%$search_term_esc%'");
 
-//echo $field1;
-//echo " ";
-//echo $field2;
-//echo "<br>";
+$chaptest=-1;
+$sub=-1;
+$hs6=-1;
+$hs8=-1;
+while($row1=mysql_fetch_array($query1))
+{
+	$chap=(int)($row1['itc']/1000000);
+	$chapter_note=(string)$chap;
+	$row2=mysql_fetch_array(mysql_query("select chapter_no,chapter_name from chapter where chapter_no=$chap"));
+	if($row2['chapter_no']!=$chaptest)
+	{
+		echo"<br>";
+		echo "<b>Chapter-".$row2['chapter_no']."--------"."<i>".$row2['chapter_name']."</i>"."</b>";
+		
+		if($chap<10)
+		{
+			echo"<br>";
+			echo"<a  target=_blank href=http://dgftcom.nic.in/licasp/itchs2012/"."0".$row2['chapter_no']."head.pdf>Chapter Notes</a>";
+			echo"<br>";
+			echo"<a target=_blank href=http://dgftcom.nic.in/licasp/itchs2012/"."0".$row2['chapter_no']."foot.pdf>Policy Notes</a>"."<br>";
+			
+		}
+		else
+		{
+			echo"<br>";
+			echo"<a  target=_blank href=http://dgftcom.nic.in/licasp/itchs2012/".$row2['chapter_no']."head.pdf>Chapter Notes</a>";
+			echo "<br>";
+			echo"<a target=_blank href=http://dgftcom.nic.in/licasp/itchs2012/".$row2['chapter_no']."foot.pdf>Policy Notes</a>"."<br>";
+			
+		}
+		
+	}
+	$chaptest=$chap;
+	if($sub!=$row1['hs4_no'])
+	{
+		echo "Subheading"."    &nbsp; ".$row1['hs4_no']."    &nbsp; "."   &nbsp;"."<br>".$row1['hs4_des'];	
+		echo"<br>";
+		
+		
+	}
+	$sub=$row1['hs4_no'];
+	
+	
+		
+	if($hs6!=$row1['$hs6_no'])
+	{
+		echo "<table width=100% border='1' bgcolor='#98fb98'>";
+		echo "<tr>";
+		echo "<td><b>"."HS6"."    &nbsp; ".$row1['hs6_no']."    &nbsp; "."   &nbsp;".$row1['hs6_des']."</b></td>";
+		echo "</tr>";
+		echo"</table>";
+	}
+	
+		echo "<table border='1' bgcolor='#98fb98'>";
+		echo"<th width=200>ITC(HS)</th>";
+		echo"<th width=800>Item Description</th>";
+		echo"<th width=200>Policy</th>";
+		echo"<th width=200>Condition</th>";
+	if($hs8!=$row1['$hs8_no'])
+	{	
+		
+		echo "<tr>";
+		echo "<td>".$row1['itc']."</td>";
+		echo "<td>".$row1['hs8_des']."</td>";
+		if(trim($row1['policy'])=="Free")
+		echo"<td>Permitted</td>";
+		elseif($row1['policy']=="")
+		echo"<td>N/A</td>";
+		else
+		echo "<td>".$row1['policy']."</td>";
+		if($row1['conditions']=="")
+		echo"<td>N/A</td>";
+		else
+		echo "<td>".$row1['conditions']."</td>";
+		echo "</tr>";
+		
+		
+	}	
+	echo"</table>";
+	echo"<br>";
 
-
-$i++;
 }
+
+
 
 
 ?>
