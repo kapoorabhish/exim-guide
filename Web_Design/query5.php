@@ -274,7 +274,7 @@ else if(($count==5&&$itc<=91099)||($count==6&&$itc<=980590))
 	echo"<br>";
 	echo "HS6"."    &nbsp; ".$row2['hs6_no']."    &nbsp; "."   &nbsp;".$row2['hs6_des'];
 	$last=$row2['hs6_no'];
-	$query3=mysql_query("select itc,hs8_des,policy,conditions from master where itc like '$last%' ");
+	$query3=mysql_query("select itc,hs8_des,policy,conditions from master where hs6_des=$last ");
 	echo "<table border='1' bgcolor='#98fb98'>";
 	echo"<th width=200>ITC(HS)</th>";
 	echo"<th width=800>Item Description</th>";
