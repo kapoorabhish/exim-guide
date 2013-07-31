@@ -5,49 +5,23 @@
 	<?php include 'header.tpl.php'; ?>
 	</head>
 <style>
-.top {opacity:0.2; }
-.top:hover { opacity:1.0; }
+.chap{
+color:#e6e6e6;
+font-size: 1.3em;
+}
+.subhd{
+color:#d8d8d8;
+font-size:1.2em;
+}
+.hs{
+color:#bdbdbd;
+font-size:1.0em;
+}
 </style>
 
 	<body>
     <div class="spinner"></div></html>
-   <!--============================== header =================================-->
-<header>
-      <div class="container clearfix">
-    <div class="row">
-          <div class="span12">
-        <div class="navbar navbar_">
-              <div class="container">
-            <h1 class="brand brand_"><a href="index.php"><img alt="" src="imgs/logo.gif"> </a></h1>
-            <a class="btn btn-navbar btn-navbar_" data-toggle="collapse" data-target=".nav-collapse_">Menu <span class="icon-bar"></span> </a>
-            <div class="nav-collapse nav-collapse_  collapse">
-                  <ul class="nav sf-menu">
-                <li><a href="index.php">Home</a></li>
-		<li><a href="about.php">About</a></li>
-		
-                <li class="sub-menu, active"><a href="service.html">Services</a>
-                      <ul>
-                    <li><a href="trade.php">Trade</a></li>
-                    <li><a href="tarrif.php">Tarrif</a></li>
-                     <li><a href="iec.php">IEC Codes</a></li>
-                  </ul>
-                    </li>
-                 <li class="sub-menu"><a href="help.php">Help</a>
-               <ul>
-                    <li><a href="weblink.php">Web-Links</a></li>
-                   <li><a href="asso.php">Trade Associations</a></li>
-                   
-                  </ul> <li class="star"><a href="/2/">3-Click </a></li>
-                </li>
-               
-              </ul>
-                </div>
-          </div>
-            </div>
-      </div>
-        </div>
-  </div>
-    </header>
+
 <div class="bg-content">
       <div class="container">
     <div class="row">
@@ -76,20 +50,20 @@ while($row1=mysql_fetch_array($query1))
 	if($row2['chapter_no']!=$chaptest)
 	{
 		echo"<br>";
-		echo "<b>Chapter-".$row2['chapter_no']."--------"."<i>".$row2['chapter_name']."</i>"."</b>";
+		echo "<center><b class='chap'>Chapter-".$row2['chapter_no']." : "."<i>".$row2['chapter_name']."</i>"."</b></center>";
 		
 		if($chap<10)
 		{
-			echo"<center><a  href=http://dgftcom.nic.in/licasp/itchs2012/"."0".$chap['chapter_no']."head.pdf><h5 style = 'color: #e85356' > Chapter Notes</h5></a>";
+			echo"<center><a target=_blank href=http://dgftcom.nic.in/licasp/itchs2012/"."0".$chapter_note."head.pdf><h5 style = 'color: #e85356' > Chapter Notes</h5></a>";
 			//echo"<br>";
-			echo"<a  href=http://dgftcom.nic.in/licasp/itchs2012/"."0".$chap['chapter_no']."foot.pdf><h5 style = 'color: #e85356'>Policy Notes</h5></a></center>";
+			echo"<a  target=_blank href=http://dgftcom.nic.in/licasp/itchs2012/"."0".$chapter_note."foot.pdf><h5 style = 'color: #e85356'>Policy Notes</h5></a></center>";
 			echo"<br>";
 		}
 		else
 		{
-			echo"<center><a  href=http://dgftcom.nic.in/licasp/itchs2012/".$chap['chapter_no']."head.pdf><h5 style = 'color: #e85356' >Chapter Notes</h5></a>";
+			echo"<center><a target=_blank href=http://dgftcom.nic.in/licasp/itchs2012/".$chapter_note."head.pdf><h5 style = 'color: #e85356' >Chapter Notes</h5></a>";
 			//echo "<br>";
-			echo"<a href=http://dgftcom.nic.in/licasp/itchs2012/".$chap['chapter_no']."foot.pdf><h5 style = 'color: #e85356'>Policy Notes</h5></a></center>";
+			echo"<a target=_blank href=http://dgftcom.nic.in/licasp/itchs2012/".$chapter_note."foot.pdf><h5 style = 'color: #e85356'>Policy Notes</h5></a></center>";
 			echo"<br>";
 			
 		}
@@ -98,8 +72,9 @@ while($row1=mysql_fetch_array($query1))
 	$chaptest=$chap;
 	if($sub!=$row1['hs4_no'])
 	{
-		echo "Subheading"."    &nbsp; ".$row1['hs4_no']."    &nbsp; "."   &nbsp;"."<br>".$row1['hs4_des'];	
-		echo"<br>";
+		echo "<div class='subhd'>"."Subheading "."    &nbsp; ".$row1['hs4_no']."  &nbsp; "."     &nbsp;"."  :  ".$row1['hs4_des'];
+		echo "</div>";	
+		
 		
 		
 	}
@@ -110,7 +85,7 @@ while($row1=mysql_fetch_array($query1))
 	if($hs6!=$row1['$hs6_no'])
 	{
 		
-		echo "<td><b>"."HS6"."    &nbsp; ".$row1['hs6_no']."    &nbsp; "."   &nbsp;".$row1['hs6_des']."</b></td>";
+		echo "<td><b class='hs'>"."HS6"."    &nbsp; ".$row1['hs6_no']."    &nbsp; : "."   &nbsp;".$row1['hs6_des']."</b></td>";
 		
 	}
 	
@@ -139,6 +114,7 @@ while($row1=mysql_fetch_array($query1))
 		else
 		echo "<div id='no-more-tables'><td data-title='Condition'>".$row1['conditions']."</td>";
 		echo "</tr>";
+echo "<br>";
 		
 		
 	}	
@@ -153,10 +129,6 @@ while($row1=mysql_fetch_array($query1))
 ?>
 <!--============================== footer =================================-->
 <?php include 'footer.tpl.php'; ?>
-<!------------------------------------------------------------------------------------------------------->
-<div class="top"><a style="position: fixed; bottom:5px;left:5px;" href="#" title="Back to Top"><img style="border: none; width:100px; height:100px;" src="imgs/top.jpeg"/></a></div>
 
-
-<!------------------------------------------------------------------------------------------------------->
 </body>
 </html>

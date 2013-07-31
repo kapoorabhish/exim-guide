@@ -10,8 +10,8 @@
     #no-more-tables td,
     #no-more-tables tr {
     display: block;
-    background-color: #ffe4c4;
-    color:#5500bb;
+    background-color: #2e2e2e;
+    color:#bdbdbd;
     }
     
     /* Hide table headers (but not display: none;, for accessibility) */

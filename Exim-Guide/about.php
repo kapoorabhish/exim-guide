@@ -10,42 +10,7 @@
 	<body>
     <div class="spinner"></div></html>
 	
-<!--============================== header =================================-->
-<header>
-      <div class="container clearfix">
-    <div class="row">
-          <div class="span12">
-        <div class="navbar navbar_">
-              <div class="container">
-            <h1 class="brand brand_"><a href="navik.html"><img alt="" src="img/logo.gif"> </a></h1>
-            <a class="btn btn-navbar btn-navbar_" data-toggle="collapse" data-target=".nav-collapse_">Menu <span class="icon-bar"></span> </a>
-            <div class="nav-collapse nav-collapse_  collapse">
-                  <ul class="nav sf-menu">
-                <li ><a href="index.php">Home</a></li>
-                
-		<li class="active"><a href="about.php">About</a></li>
-		
-                <li class="sub-menu"><a href="service.php">Services</a>
-                      <ul>
-                    <li><a href="trade.php">Trade</a></li>
-                <li><a href="tarrif.php">Tarrif</a></li>
-                    <li><a href="iec.php">IEC Codes</a></li>
-                  </ul>
-                    </li>
-                  <li class="sub-menu"><a href="help.php">Help</a>
-               <ul>
-                    <li><a href="weblink.php">Web-Links</a></li>
-                   <li><a href="asso.php">Trade Associations</a></li>
-                   
-                  
-                  </ul> <li class="act"><a href="3-click.html">3-Click </a></li>
-                </div>
-          </div>
-            </div>
-      </div>
-        </div>
-  </div>
-    </header>
+
 <div class="bg-content">
       <div class="container">
     <div class="row">
@@ -65,7 +30,7 @@
         					<li class="span12">
         						
         							<div class="thumbnail thumbnail-1" style="background-color:#0a0a0f;">
-        								<h6 style="color: #FFF0F5; font-family: 'Armata', sans-serif; font-weight:400; font-size:100%; word-spacing:7px;" > 	"Developed under the aegis of NIC, Govt. of India, "Exim Guide" aims to serve as a single query window for people who are involved in Indian trade. The app provides important details like ITC & IEC codes, tariff calculator and web links to trade associations.
+        								<h6 style="color: #FFF0F5; font-family: 'Armata', sans-serif; font-weight:400; font-size:100%; word-spacing:7px;" > 	"Developed under the aegis of NIC, Govt. of India, "Exim Guide" aims to serve as a single query window for people who are involved in Indian trade. The app provides important details like ITC & IEC codes, Tariff Calculator ,Web Links and address of Trade Associations.
 The need for such an app stems from the latent demand for availability of credible and up-to-date information for people involved in trade. The mantra followed during development has been that of providing updated and relevant information only, sans the complexities.
 Various stakeholders like shipping agents, stevedores, freight forwarders and related parties would find this app particularly useful for mining for data like tariffs, codes, links for various ports and exchange tariffs.
 All said and done, any more suggestions for additional information and improvements in the app are welcome too."</h6>
@@ -114,23 +79,23 @@ All said and done, any more suggestions for additional information and improveme
 							Data Centre and Web Services Division<br>
 							National Informatics Centre (NIC), DeitY, MoCIT<br>
 							New Delhi. Ph: 011-24305380<br>
-							<a href="idea.pdf">View Idea PDF</a></p></center>
+							<a target=_blank href="idea.pdf">View Idea PDF</a></p></center>
 					</div>
 					</div>
 					</center><br><br><br><br><br><br>
 					<ul >
  					<div class="span12"><center><h3>Mentors</h3></center></div>
  					
-<div class="span2"><img src="imgs/manas.jpg" class="img-circle"><a href="http://in.linkedin.com/pub/manas-ranjan-kar/37/272/a17/ ">Manas Ranjan Kar</a></div>
-<div class="span2"><img src="imgs/sub.jpg" class="img-circle"><a href="">Subhranshu</a></div>
-<div class="span2"><img src="imgs/nasr.jpg" class="img-circle"><a href="http://in.linkedin.com/in/nasrhadi">Nasr-ul-Hadi</a></div>
-<div class="span2"><img src="imgs/deepak.jpg" class="img-circle"><a href="http://in.linkedin.com/in/deepakjharodia">Deepak Jharodia</a></div>
-<div class="span2"><img src="imgs/himanshu.jpg" class="img-circle"><a href="http://in.linkedin.com/pub/himanshu-anand/28/863/997">Himanshu Anand</a></div>
+<div class="span2"><img src="imgs/manas.jpg" class="img-circle"><a target=_blank href="http://in.linkedin.com/pub/manas-ranjan-kar/37/272/a17/ ">Manas Ranjan Kar</a></div>
+<div class="span2"><img src="imgs/sub.jpg" class="img-circle"><a target=_blank href="http://in.linkedin.com/in/subhranusekhar">Subhranshu</a></div>
+<div class="span2"><img src="imgs/nasr.jpg" class="img-circle"><a target=_blank href="http://in.linkedin.com/in/nasrhadi">Nasr-ul-Hadi</a></div>
+<div class="span2"><img src="imgs/deepak.jpg" class="img-circle"><a target=_blank href="http://in.linkedin.com/in/deepakjharodia">Deepak Jharodia</a></div>
+<div class="span2"><img src="imgs/himanshu.jpg" class="img-circle"><a target=_blank href="http://in.linkedin.com/pub/himanshu-anand/28/863/997">Himanshu Anand</a></div>
 <!--<div class="span2"><div class="thumbnail thumbnail-1"><img src="imgs/naval.jpg" class="img-circle"><a href="http://in.linkedin.com/in/navalsaini">Naval Saini</a></div></div>-->
 <br><br>
 </ul>
                   			<div class="span12"><center><h3>Special Thanks</h3></center>
-                  			<div class="span3"><img src="imgs/satya.jpg" class="img-circle"><a href="http://in.linkedin.com/in/satyaakam ">Satyaakam Goswami</a></div>
+                  			<div class="span3"><img src="imgs/satya.jpg" class="img-circle"><a target=_blank href="http://in.linkedin.com/in/satyaakam ">Satyaakam Goswami</a></div>
   <div class="span6"><h6 style="color: #FFF0F5; font-family: 'Armata', sans-serif; font-weight:400; font-size:100%; word-spacing:7px;" > <br><br>A very Special Thanks to Satyakkam Goswami for being our support for entire development of this project who encouraged and motivated us.
 
   His sacrifices of valuable time for this commitment has made this possible indeed.
@@ -142,10 +107,6 @@ A coach to us in a variety of ways, We thank you from the bottom of our heart.</
 
 <!--============================== footer =================================-->
 <?php include 'footer.tpl.php'; ?>
-<!------------------------------------------------------------------------------------------------------->
-<div class="top"><a style="position: fixed; bottom:5px;left:5px;" href="#" title="Back to Top"><img style="border: none; width:100px; height:100px;" src="imgs/top.jpeg"/></a></div>
 
-
-<!------------------------------------------------------------------------------------------------------->
 </body>
 </html>

@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="css/tables.css" type="text/css" media="screen">
 <link rel="stylesheet" href="css/touchTouch.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="css/kwicks-slider.css" type="text/css" media="screen">
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+	<!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>-->
 	<script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/superfish.js"></script>
     <script src="assets/js/jquery.js" type="text/javascript"></script>
@@ -49,5 +49,36 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
   <![endif]-->
-	
+	</head>
+<style>
+.top {opacity:0.2; }
+.top:hover { opacity:1.0; }
+</style>
+<!--============================== header =================================-->
+<header>
+      <div class="container clearfix">
+    <div class="row">
+          <div class="span12">
+        <div class="navbar navbar_">
+              <div class="container">
+            <h1 class="brand brand_"><a href="index.php"><img alt="" src="img/logo.jpg"> </a></h1>
+            <a class="btn btn-navbar btn-navbar_" data-toggle="collapse" data-target=".nav-collapse_">Menu <span class="icon-bar"></span> </a>
+            <div class="nav-collapse nav-collapse_  collapse">
+                  <ul class="nav sf-menu">
+              <li class="act"><a href="index.php">Home</a></li>
+		<li ><a href="about.php">About</a></li>
+		
+                <li ><a href="service.php">Services</a></li>
+                     
+                  
+                  <li ><a href="help.php">Help</a></li>
+                </li>
+              </ul>
+                  
+          </div>
+            </div>
+      </div>
+        </div>
+  </div>
+    </header>
 

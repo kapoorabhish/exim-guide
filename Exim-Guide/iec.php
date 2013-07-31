@@ -18,46 +18,12 @@ p {margin-left:20px;style="color: #FFF0F5;font-family: 'Jacques Francois', serif
 
 	<body>
     <div class="spinner"></div></html>
-<!--============================== header =================================-->
-<header>
-      <div class="container clearfix">
-    <div class="row">
-          <div class="span12">
-        <div class="navbar navbar_">
-              <div class="container">
-            <h1 class="brand brand_"><a href="index.php"><img alt="" src="imgs/logo.gif"> </a></h1>
-            <a class="btn btn-navbar btn-navbar_" data-toggle="collapse" data-target=".nav-collapse_">Menu <span class="icon-bar"></span> </a>
-            <div class="nav-collapse nav-collapse_  collapse">
-                  <ul class="nav sf-menu">
-                <li ><a href="index.php">Home</a></li>
-		<li><a href="about.php">About</a></li>
-		
-                <li class="sub-menu"><a href="service.php">Services</a>
-                      <ul>
-                    <li><a href="trade.php">Trade</a></li>
-                   <li><a href="tarrif.php">Tarrif</a></li>
-                     <li><a href="iec.php">IEC Codes</a></li>
-                  </ul>
-                    </li>
-                <li class="sub-menu, active"><a href="help.php">Help</a>
-               <ul>
-                    <li><a href="weblink.php">Web-Links</a></li>
-                   <li><a href="asso.php">Trade Associations</a></li>
-                   
-                  </ul> <li class="act"><a href="3-click.html">3-Click </a></li>
-                </li>
-              </ul>
-                </div>
-          </div>
-            </div>
-      </div>
-        </div>
-  </div>
-    </header>
+
 <div class="bg-content">
       <div class="container">
     <div class="row">
           <div class="span12"> 
+
 
  <!--============================== content =================================-->
  
@@ -67,9 +33,9 @@ p {margin-left:20px;style="color: #FFF0F5;font-family: 'Jacques Francois', serif
  		<article class="span12">
               		<h3>Importer Exporter Code Number</h3>
         	</article>
-        	<p>IEC Code is unique 10 digit code issued by <a href="http://dgft.gov.in">DGFT</a> – Director General of Foreign Trade , 			Ministry of Commerce, Government of India to Indian Companies.</p>
+        	<p>IEC Code is unique 10 digit code issued by <a target=_blank href="http://dgft.gov.in">DGFT</a> – Director General of Foreign Trade , 			Ministry of Commerce, Government of India to Indian Companies.</p>
         	<h3>Application for Grant of IEC Number</h3>
- 		<p>An application for grant of IEC number shall be made by the Registered/Head Office of the applicant and apply to the nearest Regional Authority of Directorate General Foreign Trade, the Registered office in case of company and Head office in case of others, falls in the <a href="anf2a.doc">‘Aayaat Niryaat Form - ANF2A’</a> and shall be accompanied by documents prescribed therein. In case of STPI/ EHTP/ BTP units, the Regional Offices of the DGFT having jurisdiction over the district in which the Registered/ Head Office of the STPI unit is located shall issue or amend the IECs.
+ 		<p>An application for grant of IEC number shall be made by the Registered/Head Office of the applicant and apply to the nearest Regional Authority of Directorate General Foreign Trade, the Registered office in case of company and Head office in case of others, falls in the <a target=_blank href="anf2a.doc">‘Aayaat Niryaat Form - ANF2A’</a> and shall be accompanied by documents prescribed therein. In case of STPI/ EHTP/ BTP units, the Regional Offices of the DGFT having jurisdiction over the district in which the Registered/ Head Office of the STPI unit is located shall issue or amend the IECs.
 
 Only one IEC would be issued against a single PAN number. Any proprietor can have only one IEC number and in case there are more than one IECs allotted to a proprietor, the same may be surrendered to the Regional Office for cancellation.
 </p>
@@ -142,17 +108,13 @@ Issue and Despatch of  IEC Code
 
 IEC allotment letter is sent through post at the registered office mentioned by the applicant in the application. Similarly deficiency letters are sent to applicant by post.
 <h3>Status of IEC Application</h3>
-<p> To know your IEC code status <a href="http://dgft.delhi.nic.in:8100/dgft/IecPrint"> CLICK HERE</a></p>
-    <p>For Detailed PDF- <a href="http://dgft.gov.in/exim/2000/IECONLINEHelp.pdf"> CLICK HERE </a></p>
+<p> To know your IEC code status <a target=_blank href="http://dgft.delhi.nic.in:8100/dgft/IecPrint"> CLICK HERE</a></p>
+    <p>For Detailed PDF- <a target=_blank href="http://dgft.gov.in/exim/2000/IECONLINEHelp.pdf"> CLICK HERE </a></p>
  	</div>
  </div>     
  <!--============================== footer =================================-->
 <?php include 'footer.tpl.php'; ?>
-<!------------------------------------------------------------------------------------------------------->
-<div class="top"><a style="position: fixed; bottom:5px;left:5px;" href="#" title="Back to Top"><img style="border: none; width:100px; height:100px;" src="imgs/top.jpeg"/></a></div>
 
-
-<!------------------------------------------------------------------------------------------------------->
 </body>
 </html>
    

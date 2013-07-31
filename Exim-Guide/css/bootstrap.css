@@ -1528,8 +1528,8 @@ legend + .control-group {
 }
 table {
   max-width: 100%;
-  background-color: #ffe4c4;
-  color:#5500bb;
+  background-color: #2e2e2e;
+  color:#bdbdbd;
   border-collapse: collapse;
   border-spacing: 0;
 }
@@ -1546,6 +1546,7 @@ table {
   border-top: 1px solid #dddddd;
 }
 .table th {
+   background-color:#585858 !important;
   font-weight: bold;
 }
 .table thead th {
@@ -1641,7 +1642,7 @@ table {
 }
 .table-hover tbody tr:hover td,
 .table-hover tbody tr:hover th {
-  background-color: #f5f5f5;
+  background-color: #424242;
 }
 table [class*=span],
 .row-fluid table [class*=span] {
@@ -4917,7 +4918,26 @@ border-collapse:collapse;
 
 }
 ///////////////////////////////*/
+
+  .navigationArea ul{width:100% !important; border-bottom: 1px solid #424242;}
+ 
+ .navigationArea li{
+ background: none  !important;
+ padding :0  !important;
+ border: 1px solid #424242;
+ border-bottom:none;
+ }
    
+ .navigationArea li a{
+ background: url(../img/marker-1.png) no-repeat 8px 17px #2e2e2e;
+ display:block !important;
+  padding: 10px 18px !important;
+ }
+ .navigationArea li a:hover
+ {
+ background-color: #1c1c1c !important;
+ transition: background 1s;
+ }
  
 	
 
